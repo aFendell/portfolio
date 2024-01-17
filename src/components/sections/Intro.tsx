@@ -2,11 +2,12 @@ import Image from "next/image";
 import chameleon from "../../../public/images/chameleon1.webp";
 import { introData } from "@/data/intro";
 import { Button } from "@/components/ui/Button";
+import { P } from "../ui/Typography";
 
 const Intro = () => {
   const { title, subtitle } = introData;
   return (
-    <section className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
+    <section className="flex flex-col items-center gap-3 sm:flex-row sm:gap-8">
       <Image
         alt="chameleon profile picture"
         src={chameleon}

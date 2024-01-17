@@ -1,9 +1,11 @@
 import Intro from "@/components/sections/Intro";
+import Overview from "@/components/sections/Overview";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-3 py-24">
+    <>
       <Intro />
-    </main>
+      <Overview />
+    </>
   );
 }

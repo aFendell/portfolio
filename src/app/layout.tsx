@@ -1,16 +1,15 @@
-import type { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
-import './globals.css';
-import { cn } from '../lib/utils';
+import type { Metadata } from "next";
+import "@/app/globals.css";
 
-export const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
+import { cn } from "@/lib/utils";
+import Header from "@/components/layout/Header";
 
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: 'fendi.dev | Portfolio',
-  description: 'Assaf Fendell full-stack developer portfolio.',
+  title: "fendi.dev | Portfolio",
+  description: "Assaf Fendell full-stack developer portfolio.",
 };
 
 export default function RootLayout({
@@ -19,15 +18,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body
         className={cn(
-          'bg-gray-50 text-gray-950 relative min-h-screen font-sans antialiased',
-          fontSans.variable
-        )}
-      >
-        <div className='bg-[#fbe2e3] -z-10 absolute top-[-6rem] right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]'></div>
-        <div className='bg-[#dbd7fb] -z-10 absolute top-[-1rem] left-[-51rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]'></div>
+          "relative min-h-[2000px] bg-gray-50 font-sans text-gray-950 antialiased",
+          inter.className,
+        )}>
+        <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] sm:w-[68.75rem]"></div>
+        <div className="absolute left-[-51rem] top-[-1rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#dbd7fb] blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <Header />
         {children}
       </body>
     </html>

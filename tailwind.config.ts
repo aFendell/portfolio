@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import type { CSSRuleObject, Config } from "tailwindcss/types/config";
+import plugin from "tailwindcss/plugin";
 
 const config = {
   darkMode: ["class"],
@@ -74,7 +75,24 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(({ theme, addUtilities }) => {
+      const neonUtilities: CSSRuleObject = {};
+      const colors = theme("colors");
+      for (const color in colors) {
+        if (typeof colors[color] === "object") {
+          const brightColor = colors[color]["500"];
+          const darkColor = colors[color]["700"];
+
+          neonUtilities[`.neon-${color}`] = {
+            boxShadow: `0 0 5px ${brightColor}, 0 0 20px ${darkColor}`,
+          };
+        }
+      }
+      addUtilities(neonUtilities);
+    }),
+  ],
 } satisfies Config;
 
 export default config;

@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "relative min-h-[2000px] bg-gray-50 font-sans text-gray-950 antialiased",
+          "relative min-h-[2000px] bg-gray-950 font-sans text-gray-50 antialiased",
           inter.className,
         )}>
         <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] sm:w-[68.75rem]"></div>

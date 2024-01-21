@@ -68,10 +68,25 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "timeline-reveal": {
+          from: { scale: "1 0" },
+          to: { scale: "1 1" },
+        },
+        "timeline-left-item": {
+          from: { translate: "-75vw" },
+          to: { translate: "-12rem" },
+        },
+        "timeline-right-item": {
+          from: { translate: "75vw", opacity: "0" },
+          to: { translate: "12rem", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "timeline-reveal": "timeline-reveal 5s ease-in-out 0.5s",
+        "timeline-left-item": "timeline-left-item ease-in-out",
+        "timeline-right-item": "timeline-right-item ease-in-out",
       },
     },
   },

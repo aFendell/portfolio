@@ -20,7 +20,7 @@ const Header = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}>
                 <Link
-                  className="rounded-full px-4 py-2 text-white transition hover:bg-gray-50 hover:text-gray-950"
+                  className="rounded-full px-4 py-2 text-white hover:bg-gray-50 hover:text-gray-950"
                   href={route.hash}>
                   {route.name}
                 </Link>

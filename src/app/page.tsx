@@ -1,11 +1,13 @@
-import Intro from "@/components/sections/Intro";
+import Experience from "@/components/sections/experience/Experience";
+import Hero from "@/components/sections/Hero";
 import Overview from "@/components/sections/Overview";
 
 export default function Home() {
   return (
     <>
-      <Intro />
+      <Hero />
       <Overview />
+      <Experience />
     </>
   );
 }

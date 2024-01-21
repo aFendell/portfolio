@@ -1,13 +1,14 @@
 import React from "react";
 import { overviewData } from "@/data/overview";
-import { P, SectionTitle } from "../ui/Typography";
+import { Muted, Subtitle, Title } from "../ui/Typography";
 
 const Overview = () => {
-  const { title, subtitle } = overviewData;
+  const { title, subtitle, text } = overviewData;
   return (
     <section>
-      <SectionTitle>{title}</SectionTitle>
-      <P>{subtitle}</P>
+      <Muted>{subtitle}</Muted>
+      <Title>{title}</Title>
+      <Subtitle>{text}</Subtitle>
     </section>
   );
 };

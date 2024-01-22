@@ -1,6 +1,7 @@
-import Experience from "@/components/sections/experience/Experience";
 import Hero from "@/components/sections/Hero";
 import Overview from "@/components/sections/Overview";
+import Experience from "@/components/sections/experience/Experience";
+import Stack from "@/components/sections/Stack";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Overview />
       <Experience />
+      <Stack />
     </>
   );
 }

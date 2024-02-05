@@ -1,10 +1,10 @@
 import Image from "next/image";
 import chameleon from "../../../public/images/chameleon1.webp";
-import { introData } from "@/data/intro";
+import { heroData } from "@/data/hero";
 import { Button } from "@/components/ui/Button";
 
 const Hero = () => {
-  const { title, subtitle } = introData;
+  const { title, subtitle } = heroData;
 
   return (
     <section className="flex flex-col items-center gap-3 sm:flex-row sm:justify-around sm:gap-8">

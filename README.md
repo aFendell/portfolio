@@ -8,3 +8,7 @@ This is a my personal [portfolio website](https://my-portfolio-url.com/).
 - Tailwind CSS
 - shadcn
 - Framer Motion
+- React Hook Form
+- Zod
+- React Email
+- Resend

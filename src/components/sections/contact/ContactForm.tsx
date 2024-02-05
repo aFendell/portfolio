@@ -46,7 +46,6 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (values: MailPayload) => {
-    console.log("submit contact form", values);
     try {
       const response = await fetch("api/contact", {
         method: "POST",
@@ -57,8 +56,10 @@ const ContactForm = () => {
       });
 
       const data = await response.json();
+      // TODO: Add success notification
       console.log(data);
     } catch (error) {
+      // TODO: Add failure notification
       console.log("error: ", error);
     }
     form.reset();

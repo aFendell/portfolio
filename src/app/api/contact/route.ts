@@ -48,8 +48,6 @@ const sendContactDetailsMail = async (props: MailPayload) => {
 export async function POST(req: NextRequest, res: NextResponse) {
   const body: MailPayload = await req.json();
 
-  console.log("body in api:", body);
-
   try {
     const contactDetailsData = await sendContactDetailsMail(body);
     const feedbackData = await sendFeedbackMail(body);

@@ -6,10 +6,11 @@ import Header from "@/components/layout/Header";
 
 import { Inter } from "next/font/google";
 import Footer from "@/components/layout/Footer";
+import Toaster from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "fendi.dev | Portfolio",
+  title: "fendi | Portfolio",
   description: "Assaf Fendell full-stack developer portfolio.",
 };
 
@@ -32,6 +33,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

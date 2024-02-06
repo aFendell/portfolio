@@ -13,7 +13,7 @@ import {
 import { MailPayload } from "@/app/api/contact/route";
 
 const NewContactEmail = (props: MailPayload) => {
-  const { name, email, content } = props;
+  const { name, email, message } = props;
 
   return (
     <Html>
@@ -33,7 +33,7 @@ const NewContactEmail = (props: MailPayload) => {
             <Heading as="h2" className="pt-4 text-lg font-medium">
               Content
             </Heading>
-            <Text className="whitespace-pre-line">{content}</Text>
+            <Text className="whitespace-pre-line">{message}</Text>
           </Container>
         </Body>
       </Tailwind>

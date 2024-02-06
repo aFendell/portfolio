@@ -10,6 +10,8 @@ import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { FormProvider } from "@/components/forms/Form";
 import TextField from "@/components/forms/TextField";
 import TextareaField from "@/components/forms/TextareaField";
+import { useToast } from "@/hooks/useToast";
+import { contactFormData } from "@/data/contact";
 
 const formSchema: z.ZodType<MailPayload> = z.object({
   name: z
@@ -25,7 +27,7 @@ const formSchema: z.ZodType<MailPayload> = z.object({
       message: "Email is required",
     })
     .email(),
-  content: z
+  message: z
     .string()
     .min(1, {
       message: "Message is required",
@@ -36,16 +38,23 @@ const formSchema: z.ZodType<MailPayload> = z.object({
 const defaultValues: MailPayload = {
   name: "",
   email: "",
-  content: "",
+  message: "",
 };
 
 const ContactForm = () => {
+  const [isMutating, setIsMutating] = React.useState(false);
+  const { toast } = useToast();
   const form = useForm<MailPayload>({
     resolver: zodResolver(formSchema),
     defaultValues,
   });
 
+  const { notifications, title, btn } = contactFormData;
+
   const onSubmit = async (values: MailPayload) => {
+    setIsMutating(true);
+    form.reset();
+
     try {
       const response = await fetch("api/contact", {
         method: "POST",
@@ -55,19 +64,27 @@ const ContactForm = () => {
         body: JSON.stringify(values),
       });
 
-      const data = await response.json();
-      // TODO: Add success notification
-      console.log(data);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      toast({
+        title: notifications?.success?.title,
+        description: notifications?.success?.description,
+      });
     } catch (error) {
-      // TODO: Add failure notification
-      console.log("error: ", error);
+      toast({
+        title: notifications?.failure?.title,
+        description: `${notifications?.failure?.description} ${JSON.stringify(error)}`,
+        variant: "destructive",
+      });
     }
-    form.reset();
+    setIsMutating(false);
   };
 
   return (
     <Card className="mx-auto w-full max-w-96">
-      <CardHeader>Contact</CardHeader>
+      <CardHeader>{title}</CardHeader>
       <CardContent>
         <FormProvider {...form}>
           <form
@@ -86,12 +103,14 @@ const ContactForm = () => {
               title="Email*"
             />
             <TextareaField
-              name="content"
+              name="message"
               control={form.control}
-              placeholder="Content"
-              title="Content*"
+              placeholder="Message"
+              title="Message*"
             />
-            <Button type="submit">Send</Button>
+            <Button type="submit" disabled={isMutating}>
+              {btn}
+            </Button>
           </form>
         </FormProvider>
       </CardContent>

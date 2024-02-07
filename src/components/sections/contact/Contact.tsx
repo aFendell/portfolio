@@ -9,7 +9,7 @@ import Link from "next/link";
 const Contact = () => {
   const { title, subtitle } = contactData;
   return (
-    <section>
+    <section id="contact">
       <Muted>{subtitle}</Muted>
       <Title>{title}</Title>
       <ContactForm />

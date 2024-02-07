@@ -6,7 +6,7 @@ const Stack = () => {
   const { title, subtitle, stack } = stackData;
 
   return (
-    <section className="">
+    <section id="stack">
       <Muted>{subtitle}</Muted>
       <Title className="mb-12">{title}</Title>
       <ul className="flex flex-wrap justify-center gap-2 sm:gap-4">

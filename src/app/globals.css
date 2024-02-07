@@ -35,6 +35,15 @@
     --radius: 0.5rem;
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+
+    @media screen and (min-width: 640px) {
+      scroll-padding-top: 7rem;
+    }
+  }
+
   .dark {
     --background: 224 71.4% 4.1%;
     --foreground: 210 20% 98%;

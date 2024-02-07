@@ -1,26 +1,26 @@
 export const routes = [
   {
-    name: 'Home',
-    hash: '#home',
+    name: "Home",
+    hash: "#home",
   },
   {
-    name: 'About',
-    hash: '#about',
+    name: "Overview",
+    hash: "#overview",
   },
   {
-    name: 'Experience',
-    hash: '#experience',
+    name: "Experience",
+    hash: "#experience",
   },
   {
-    name: 'Skills',
-    hash: '#skills',
+    name: "Stack",
+    hash: "#stack",
   },
   {
-    name: 'Projects',
-    hash: '#projects',
+    name: "Projects",
+    hash: "#projects",
   },
   {
-    name: 'Contact',
-    hash: '#contact',
+    name: "Contact",
+    hash: "#contact",
   },
 ] as const;

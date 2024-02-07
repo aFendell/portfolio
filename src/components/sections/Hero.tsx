@@ -7,7 +7,9 @@ const Hero = () => {
   const { title, subtitle } = heroData;
 
   return (
-    <section className="flex flex-col items-center gap-3 sm:flex-row sm:justify-around sm:gap-8">
+    <section
+      id="home"
+      className="flex flex-col items-center gap-3 sm:flex-row sm:justify-around sm:gap-8">
       <Image
         alt="chameleon profile picture"
         src={chameleon}

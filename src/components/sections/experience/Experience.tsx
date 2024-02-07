@@ -8,7 +8,7 @@ const Experience = () => {
   const { title, subtitle, jobs } = experienceData;
 
   return (
-    <section>
+    <section id="experience">
       <Muted>{subtitle}</Muted>
       <Title className="mb-12">{title}</Title>
       <Timeline items={jobs} />

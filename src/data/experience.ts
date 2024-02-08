@@ -1,11 +1,11 @@
-export type Icon = "graduation" | "briefcase" | "code";
+export type ExperienceIcon = "graduation" | "briefcase" | "code";
 
 export type ExperienceItem = {
   id: string;
   title: string;
   company: string;
   description: string;
-  icon: Icon;
+  icon: ExperienceIcon;
   date: string;
 };
 

@@ -4,11 +4,11 @@ import { useEffect } from "react";
 import { useAnimate, useInView } from "framer-motion";
 import { GraduationCap, Briefcase, Code2, LucideIcon } from "lucide-react";
 
-import { Icon, ExperienceItem } from "@/data/experience";
+import type { ExperienceIcon, ExperienceItem } from "@/data/experience";
 import { cn } from "@/lib/utils";
 import { H3, Muted, P } from "@/components/ui/Typography";
 
-const iconsMap: Record<Icon, LucideIcon> = {
+const iconsMap: Record<ExperienceIcon, LucideIcon> = {
   graduation: GraduationCap,
   briefcase: Briefcase,
   code: Code2,
@@ -34,27 +34,25 @@ const TimelineItem = ({
 
   useEffect(() => {
     if (isItemInView) {
-      const enterTimeline = async () => {
+      const enterAnimation = async () => {
+        const translateX = isEven ? "-192px" : "192px";
         await animate(
           `#item-${id}`,
-          { x: 0, opacity: 1 },
-          { duration: 0.8, delay: 0.25 },
+          { opacity: [0, 1], x: [translateX, "0px"] },
+          { duration: 0.8, delay: 0.4 },
         );
         await animate(
           `#line-${id}`,
-          { opacity: 1, scaleX: 1 },
+          { opacity: [0, 1], scaleX: [0, 1] },
           { duration: 0.25 },
         );
-        animate(`#dot-${id}`, { opacity: 1, scale: 1 }, { duration: 0.25 });
+        animate(
+          `#dot-${id}`,
+          { opacity: [0, 1], scaleX: [0, 1] },
+          { duration: 0.25 },
+        );
       };
-      enterTimeline();
-    } else {
-      const exitTimeline = async () => {
-        await animate(`#dot-${id}`, { opacity: 0, scale: 0 });
-        await animate(`#line-${id}`, { opacity: 0, scaleX: 0 });
-        animate(`#item-${id}`, { x: isEven ? -75 : 75, opacity: 0 });
-      };
-      exitTimeline();
+      enterAnimation();
     }
   }, [animate, id, isEven, isItemInView]);
 
@@ -79,13 +77,13 @@ const TimelineItem = ({
       <span
         id={`line-${id}`}
         className={cn(
-          "absolute -bottom-7 top-5 hidden h-[1px] w-12 bg-white sm:inline",
+          "absolute -bottom-7 top-[22px] hidden h-[1px] w-12 scale-x-0 bg-white opacity-0 sm:inline",
           isEven ? "origin-left sm:-right-12" : "origin-right sm:-left-12",
         )}></span>
       <span
         id={`dot-${id}`}
         className={cn(
-          "fixed top-4  hidden h-3 w-3 items-center justify-center rounded-full bg-white sm:inline",
+          "fixed top-4 hidden h-3 w-3 scale-0 items-center justify-center rounded-full bg-white opacity-0 sm:inline",
           isEven ? "sm:-right-[54px]" : "sm:-left-[54px]",
         )}></span>
     </li>

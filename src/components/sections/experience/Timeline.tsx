@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
-import { ExperienceItem } from "@/data/experience";
+import type { ExperienceItem } from "@/data/experience";
 import TimelineItem from "./TimelineItem";
 
 type Props = {

@@ -12,6 +12,7 @@ import TextField from "@/components/forms/TextField";
 import TextareaField from "@/components/forms/TextareaField";
 import { useToast } from "@/hooks/useToast";
 import { contactFormData } from "@/data/contact";
+import { Loader2 } from "lucide-react";
 
 const formSchema: z.ZodType<MailPayload> = z.object({
   name: z
@@ -109,7 +110,14 @@ const ContactForm = () => {
               title="Message*"
             />
             <Button type="submit" disabled={isMutating}>
-              {btn}
+              {isMutating ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Please wait
+                </>
+              ) : (
+                <>{btn}</>
+              )}
             </Button>
           </form>
         </FormProvider>

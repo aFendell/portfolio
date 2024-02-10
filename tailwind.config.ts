@@ -80,6 +80,16 @@ const config = {
           from: { translate: "75vw", opacity: "0" },
           to: { translate: "12rem", opacity: "1" },
         },
+        "point-right": {
+          "0%, 100%": {
+            translate: "-25%",
+            "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            translate: "none",
+            "animation-timing-function": "cubic-bezier(0,0,0.2,1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -87,6 +97,7 @@ const config = {
         "timeline-reveal": "timeline-reveal 5s ease-in-out 0.5s",
         "timeline-left-item": "timeline-left-item ease-in-out",
         "timeline-right-item": "timeline-right-item ease-in-out",
+        "point-right": "point-right 1s  infinite ",
       },
     },
   },

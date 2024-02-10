@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { MoveRight } from "lucide-react";
+
 import chameleon from "../../../public/images/chameleon1.webp";
 import { heroData } from "@/data/hero";
 import { Button } from "@/components/ui/Button";
@@ -24,8 +27,16 @@ const Hero = () => {
         <p className="max-w-96 whitespace-pre-line text-pretty sm:text-xl">
           {subtitle}
         </p>
-        <Button className="flex divide-violet-50 text-violet-50 neon-violet">
-          Contact me &rarr;
+        <Button
+          className="mt-4 flex divide-violet-50 text-violet-50 neon-violet"
+          asChild>
+          <Link href="#contact">
+            Contact me
+            <MoveRight
+              size={20}
+              className="motion-safe:animate-point-right ms-4"
+            />
+          </Link>
         </Button>
       </div>
     </section>

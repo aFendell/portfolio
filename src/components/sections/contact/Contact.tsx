@@ -17,14 +17,14 @@ const Contact = () => {
         <li>
           <Button variant="outline" size="icon">
             <Link href="malito:fendell.assaf@gmail.com">
-              <Mail className="h4 w-4 text-gray-950" />
+              <Mail className="h4 w-4" />
             </Link>
           </Button>
         </li>
         <li>
           <Button variant="outline" size="icon">
             <Link href="https://www.linkedin.com/in/afendell/">
-              <Linkedin className="h4 w-4 text-gray-950" />
+              <Linkedin className="h4 w-4" />
             </Link>
           </Button>
         </li>

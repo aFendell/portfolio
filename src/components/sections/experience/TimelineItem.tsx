@@ -2,17 +2,17 @@
 
 import { useEffect } from "react";
 import { useAnimate, useInView } from "framer-motion";
-import { GraduationCap, Briefcase, Code2, LucideIcon } from "lucide-react";
+import { GraduationCap, Briefcase, Code2 } from "lucide-react";
 
-import type { ExperienceIcon, ExperienceItem } from "@/data/experience";
+import type { ExperienceItem } from "@/data/experience";
 import { cn } from "@/lib/utils";
 import { H3, Muted, P } from "@/components/ui/Typography";
 
-const iconsMap: Record<ExperienceIcon, LucideIcon> = {
+const iconsMap = {
   graduation: GraduationCap,
   briefcase: Briefcase,
   code: Code2,
-};
+} as const;
 
 type Props = {
   isEven: boolean;

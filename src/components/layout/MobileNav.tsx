@@ -24,7 +24,7 @@ const MobileNav = () => {
     <div className="fixed top-0 w-full border-opacity-40 bg-gray-950 bg-opacity-60 p-3 shadow-black/[0.03] backdrop-blur-md">
       <Button
         variant="ghost"
-        className="p-2"
+        size="icon"
         onClick={toggleIsOpen}
         data-collapse-toggle="navbar-sticky">
         <HemburgerIcon isOpen={isOpen} />

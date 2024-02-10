@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Github } from "lucide-react";
 import { contactData } from "@/data/contact";
 import { Muted, Title } from "@/components/ui/Typography";
 import ContactForm from "./ContactForm";
@@ -13,18 +13,25 @@ const Contact = () => {
       <Muted>{subtitle}</Muted>
       <Title>{title}</Title>
       <ContactForm />
-      <ul className="mt-8 flex justify-center gap-8">
+      <ul className="mt-5 flex justify-center gap-5">
         <li>
-          <Button variant="outline" size="icon">
-            <Link href="malito:fendell.assaf@gmail.com">
+          <Button variant="outline" size="icon" asChild>
+            <Link href="malito:fendell.assaf@gmail.com" target="_blank">
               <Mail className="h4 w-4" />
             </Link>
           </Button>
         </li>
         <li>
-          <Button variant="outline" size="icon">
-            <Link href="https://www.linkedin.com/in/afendell/">
+          <Button variant="outline" size="icon" asChild>
+            <Link href="https://www.linkedin.com/in/afendell/" target="_blank">
               <Linkedin className="h4 w-4" />
+            </Link>
+          </Button>
+        </li>
+        <li>
+          <Button variant="outline" size="icon" asChild>
+            <Link href="https://github.com/aFendell/" target="_blank">
+              <Github className="h4 w-4" />
             </Link>
           </Button>
         </li>

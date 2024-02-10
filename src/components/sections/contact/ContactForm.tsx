@@ -90,7 +90,7 @@ const ContactForm = () => {
         <FormProvider {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-col space-y-4">
+            className="flex flex-col gap-2">
             <TextField
               name="name"
               control={form.control}
@@ -109,7 +109,10 @@ const ContactForm = () => {
               placeholder="Message"
               title="Message*"
             />
-            <Button type="submit" disabled={isMutating}>
+            <Button
+              type="submit"
+              disabled={isMutating}
+              className="mt-4 text-violet-50 neon-violet">
               {isMutating ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />

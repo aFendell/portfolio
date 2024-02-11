@@ -36,7 +36,7 @@ export const experienceData = {
       title: "Full stack development bootcamp",
       company: "Coding Academy",
       description:
-        "I graduated after 6 months of intence, coding into the night, full stack bootcamp, and never stoped since.",
+        "I graduated after six-month of intence, coding into the night, full stack bootcamp, and have not stopped since.",
       icon: "graduation",
       date: "2021",
     },

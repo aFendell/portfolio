@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-col items-center gap-3 sm:flex-row sm:justify-around sm:gap-8">
+      className="flex flex-col items-center gap-3 motion-safe:animate-reveal sm:flex-row sm:justify-around sm:gap-8">
       <Image
         alt="chameleon profile picture"
         src={chameleon}
@@ -27,13 +27,13 @@ const Hero = () => {
           {subtitle}
         </Subtitle>
         <Button
-          className="mt-14 flex divide-violet-50 text-violet-50 neon-violet sm:mt-16"
+          className="mt-14 flex divide-violet-50 text-violet-50 neon-violet motion-safe:animate-soft-pulse sm:mt-16"
           asChild>
           <Link href="#contact">
             Contact me
             <MoveRight
               size={20}
-              className="motion-safe:animate-point-right ms-4"
+              className="ms-4 motion-safe:animate-bounce-right"
             />
           </Link>
         </Button>

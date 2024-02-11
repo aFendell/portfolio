@@ -68,19 +68,7 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "timeline-reveal": {
-          from: { scale: "1 0" },
-          to: { scale: "1 1" },
-        },
-        "timeline-left-item": {
-          from: { translate: "-75vw" },
-          to: { translate: "-12rem" },
-        },
-        "timeline-right-item": {
-          from: { translate: "75vw", opacity: "0" },
-          to: { translate: "12rem", opacity: "1" },
-        },
-        "point-right": {
+        "bounce-right": {
           "0%, 100%": {
             translate: "-25%",
             "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
@@ -95,15 +83,21 @@ const config = {
           "5%, 15%, 25%": { transform: "rotate(8deg)" },
           "100%": { transform: "rotate(-8deg)" },
         },
+        reveal: {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
+        "soft-pulse": {
+          "50%": { opacity: "0.85" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "timeline-reveal": "timeline-reveal 5s ease-in-out 0.5s",
-        "timeline-left-item": "timeline-left-item ease-in-out",
-        "timeline-right-item": "timeline-right-item ease-in-out",
-        "point-right": "point-right 1s infinite",
+        "bounce-right": "bounce-right 1s infinite",
         wiggle: "wiggle 5s ease-in-out infinite",
+        reveal: "reveal 3s ease-in-out",
+        "soft-pulse": "soft-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
     },
   },

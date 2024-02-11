@@ -112,11 +112,11 @@ const ContactForm = () => {
             <Button
               type="submit"
               disabled={isMutating}
-              className="mt-4 text-violet-50 neon-violet">
+              className="mt-4 text-violet-50 neon-violet motion-safe:animate-soft-pulse">
               {isMutating ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Please wait
+                  Sending message
                 </>
               ) : (
                 <>{btn}</>

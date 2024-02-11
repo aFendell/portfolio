@@ -83,7 +83,7 @@ const TimelineItem = ({
         <P>{date}</P>
         <div className="flex items-center justify-center gap-2 sm:justify-start">
           <Muted className="mr-2">{company}</Muted>
-          <IconComponent />
+          <IconComponent className="animate-wiggle" />
         </div>
         <P className="pt-3">{description}</P>
       </div>

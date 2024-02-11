@@ -90,6 +90,11 @@ const config = {
             "animation-timing-function": "cubic-bezier(0,0,0.2,1)",
           },
         },
+        wiggle: {
+          "0%, 10%, 20%, 30%": { transform: "rotate(-8deg)" },
+          "5%, 15%, 25%": { transform: "rotate(8deg)" },
+          "100%": { transform: "rotate(-8deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -97,7 +102,8 @@ const config = {
         "timeline-reveal": "timeline-reveal 5s ease-in-out 0.5s",
         "timeline-left-item": "timeline-left-item ease-in-out",
         "timeline-right-item": "timeline-right-item ease-in-out",
-        "point-right": "point-right 1s  infinite ",
+        "point-right": "point-right 1s infinite",
+        wiggle: "wiggle 5s ease-in-out infinite",
       },
     },
   },

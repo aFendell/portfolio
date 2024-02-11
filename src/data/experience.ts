@@ -18,7 +18,7 @@ export const experienceData = {
       title: "Full-Stack Developer",
       company: "fendi.dev",
       description:
-        "I'm currently a full-stack developer working as a freelancer. My stack includes React, TypeScript, Nest.js, Next.js, Tailwind, Styled-Components, TypeORM, Prisma, PostgreSQL and MongoDB. I'm open to full-time opportunities.",
+        "I'm currently a full-stack developer working as a freelancer. My stack includes React, TypeScript, Next.js, Styled-Components, Tailwind, NestJS, TypeORM, Prisma, PostgreSQL and MongoDB. I'm open to full-time opportunities.",
       icon: "code",
       date: "2023 - present",
     },

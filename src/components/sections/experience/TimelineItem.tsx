@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
-import { useAnimate, useInView } from "framer-motion";
+import * as React from "react";
+import { stagger, useAnimate, useInView } from "framer-motion";
 import { GraduationCap, Briefcase, Code2 } from "lucide-react";
 
 import type { ExperienceItem } from "@/data/experience";
 import { cn } from "@/lib/utils";
 import { H3, Muted, P } from "@/components/ui/Typography";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const iconsMap = {
   graduation: GraduationCap,
@@ -31,30 +32,42 @@ const TimelineItem = ({
 
   const [itemScope, animate] = useAnimate();
   const isItemInView = useInView(itemScope, { once: true });
+  const isSmScreen = useMediaQuery("sm");
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (isItemInView) {
-      const enterAnimation = async () => {
-        const translateX = isEven ? "-192px" : "192px";
-        await animate(
-          `#item-${id}`,
-          { opacity: [0, 1], x: [translateX, "0px"] },
-          { duration: 0.8, delay: 0.4 },
-        );
-        await animate(
-          `#line-${id}`,
-          { opacity: [0, 1], scaleX: [0, 1] },
-          { duration: 0.25 },
-        );
-        animate(
-          `#dot-${id}`,
-          { opacity: [0, 1], scaleX: [0, 1] },
-          { duration: 0.25 },
-        );
-      };
-      enterAnimation();
+      if (!isSmScreen) {
+        const enterAnimation = async () => {
+          await animate(
+            `#item-${id}`,
+            { opacity: [0, 1] },
+            { duration: 2, delay: stagger(1) },
+          );
+        };
+        enterAnimation();
+      } else {
+        const enterAnimation = async () => {
+          const translateX = isEven ? "-192px" : "192px";
+          await animate(
+            `#item-${id}`,
+            { opacity: [0, 1], x: [translateX, "0px"] },
+            { duration: 0.8, delay: 0.4 },
+          );
+          await animate(
+            `#line-${id}`,
+            { opacity: [0, 1], scaleX: [0, 1] },
+            { duration: 0.25 },
+          );
+          animate(
+            `#dot-${id}`,
+            { opacity: [0, 1], scaleX: [0, 1] },
+            { duration: 0.25 },
+          );
+        };
+        enterAnimation();
+      }
     }
-  }, [animate, id, isEven, isItemInView]);
+  }, [animate, id, isEven, isItemInView, isSmScreen]);
 
   return (
     <li

@@ -16,7 +16,7 @@ const Contact = () => {
       <ul className="mt-5 flex justify-center gap-5">
         <li>
           <Button variant="outline" size="icon" asChild>
-            <Link href="malito:fendell.assaf@gmail.com" target="_blank">
+            <Link href="mailto:fendell.assaf@gmail.com" target="_blank">
               <Mail className="h4 w-4" />
             </Link>
           </Button>

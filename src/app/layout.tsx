@@ -29,7 +29,7 @@ export default function RootLayout({
         <div className="absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] sm:w-[68.75rem]"></div>
         <div className="absolute left-[-51rem] top-[-1rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#dbd7fb] blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
         <Header />
-        <main className="mx-auto flex max-w-screen-lg flex-1 flex-col items-stretch gap-12 px-3 pb-6 pt-24 sm:gap-20 sm:px-6 sm:pb-20 sm:pt-28">
+        <main className="mx-auto flex max-w-screen-lg flex-1 flex-col items-stretch gap-16 px-3 pb-16 pt-24 sm:gap-20 sm:px-6 sm:pb-20 sm:pt-28">
           {children}
         </main>
         <Footer />

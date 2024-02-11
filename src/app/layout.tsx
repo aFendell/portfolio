@@ -10,8 +10,9 @@ import Toaster from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "fendi | Portfolio",
-  description: "Assaf Fendell full-stack developer portfolio.",
+  title: "Assaf Fendell | Full-stack developer",
+  description:
+    "Crafting seamless digital experience through innovative code and design. Main Tools: React, Redux, TypeScript, Next.js, Vite, React Query, Styled-Components, Material UI, Node.js, NestJS, TypeORM, PostgreSQL",
 };
 
 export default function RootLayout({

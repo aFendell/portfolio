@@ -2,7 +2,7 @@ import React from "react";
 
 import { experienceData } from "@/data/experience";
 import Timeline from "./Timeline";
-import { Muted, Title } from "@/components/ui/Typography";
+import { Muted, SectionTitle } from "@/components/ui/Typography";
 
 const Experience = () => {
   const { title, subtitle, jobs } = experienceData;
@@ -10,7 +10,7 @@ const Experience = () => {
   return (
     <section id="experience">
       <Muted>{subtitle}</Muted>
-      <Title className="mb-12">{title}</Title>
+      <SectionTitle>{title}</SectionTitle>
       <Timeline items={jobs} />
     </section>
   );

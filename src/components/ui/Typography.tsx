@@ -1,13 +1,28 @@
 import { cn } from "@/lib/utils";
 
-export const Title = ({
+export const HeroTitle = ({
+  children,
+  className,
+}: React.HTMLAttributes<HTMLHeadingElement>) => {
+  return (
+    <h1
+      className={cn(
+        "mb-8 scroll-m-20 text-center text-4xl font-bold sm:mb-12 sm:text-start sm:text-5xl sm:font-extrabold",
+        className,
+      )}>
+      {children}
+    </h1>
+  );
+};
+
+export const SectionTitle = ({
   children,
   className,
 }: React.HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <h2
       className={cn(
-        "mb-6 scroll-m-20 text-center text-2xl font-medium sm:text-start sm:text-3xl",
+        "mb-8 scroll-m-20 text-center text-2xl font-medium sm:mb-12 sm:text-start sm:text-3xl",
         className,
       )}>
       {children}

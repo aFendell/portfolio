@@ -35,7 +35,7 @@ const Timeline = ({ items }: Props) => {
         viewport={{
           once: true,
         }}></motion.div>
-      <ul className="flex flex-col items-center justify-center gap-4 sm:gap-8">
+      <ul className="flex flex-col items-center justify-center gap-6 sm:gap-8">
         {items.map((item, index) => {
           const isEven = index % 2 === 0 ? true : false;
           return <TimelineItem key={item.id} {...item} isEven={isEven} />;

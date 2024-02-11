@@ -1,5 +1,5 @@
 import { stackData } from "@/data/stack";
-import { Muted, Title } from "@/components/ui/Typography";
+import { Muted, SectionTitle } from "@/components/ui/Typography";
 import StackItem from "./StackItem";
 
 const Stack = () => {
@@ -8,7 +8,7 @@ const Stack = () => {
   return (
     <section id="stack">
       <Muted>{subtitle}</Muted>
-      <Title className="mb-12">{title}</Title>
+      <SectionTitle>{title}</SectionTitle>
       <ul className="flex flex-wrap justify-center gap-2 sm:gap-4">
         {stack.map((tech, index) => (
           <StackItem key={tech} index={index} tech={tech} />

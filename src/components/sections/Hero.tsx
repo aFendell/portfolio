@@ -5,6 +5,7 @@ import { MoveRight } from "lucide-react";
 import chameleon from "../../../public/images/chameleon1.webp";
 import { heroData } from "@/data/hero";
 import { Button } from "@/components/ui/Button";
+import { HeroTitle, Subtitle } from "../ui/Typography";
 
 const Hero = () => {
   const { title, subtitle } = heroData;
@@ -16,19 +17,17 @@ const Hero = () => {
       <Image
         alt="chameleon profile picture"
         src={chameleon}
-        className="h-24 w-24 rounded-full object-cover shadow-xl sm:h-40 sm:w-40"
+        className="h-32 w-32 rounded-full object-cover shadow-xl sm:h-56 sm:w-56"
         quality={100}
         placeholder="blur"
       />
-      <div className="flex flex-col content-stretch gap-3 text-center sm:gap-6 sm:text-start">
-        <h1 className="text-4xl font-bold sm:mb-auto sm:text-5xl sm:font-extrabold">
-          {title}
-        </h1>
-        <p className="max-w-96 whitespace-pre-line text-pretty sm:text-xl">
+      <div className="">
+        <HeroTitle>{title}</HeroTitle>
+        <Subtitle className="max-w-96 whitespace-pre-line text-pretty text-2xl">
           {subtitle}
-        </p>
+        </Subtitle>
         <Button
-          className="mt-4 flex divide-violet-50 text-violet-50 neon-violet"
+          className="mt-14 flex divide-violet-50 text-violet-50 neon-violet sm:mt-16"
           asChild>
           <Link href="#contact">
             Contact me

@@ -34,8 +34,9 @@ const StackItem = ({ tech, index }: Props) => {
       custom={index}>
       <Badge
         variant="secondary"
-        className="rounded-sm neon-neutral sm:rounded-md sm:px-3 sm:py-2 sm:text-base">
+        className="relative rounded-sm neon-neutral sm:rounded-md sm:px-3 sm:py-2 sm:text-base">
         {tech}
+        <div className="absolute -inset-0.5 -z-20 w-full animate-tilt rounded-md bg-white opacity-75 blur-[1px] transition"></div>
       </Badge>
     </motion.li>
   );

@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 
 import { MailPayload } from "@/app/api/contact/route";
-import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { FormProvider } from "@/components/forms/Form";
 import TextField from "@/components/forms/TextField";
@@ -13,6 +12,7 @@ import TextareaField from "@/components/forms/TextareaField";
 import { useToast } from "@/hooks/useToast";
 import { contactFormData } from "@/data/contact";
 import { Loader2 } from "lucide-react";
+import ActionButton from "@/components/ui/ActionButton";
 
 const formSchema: z.ZodType<MailPayload> = z.object({
   name: z
@@ -84,7 +84,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Card className="mx-auto w-full max-w-96">
+    <Card className="mx-auto w-full max-w-96 bg-gray-700 bg-opacity-20 text-primary-foreground backdrop-blur-md neon-neutral">
       <CardHeader>{title}</CardHeader>
       <CardContent>
         <FormProvider {...form}>
@@ -109,19 +109,16 @@ const ContactForm = () => {
               placeholder="Message"
               title="Message*"
             />
-            <Button
-              type="submit"
-              disabled={isMutating}
-              className="mt-4 text-violet-50 neon-violet motion-safe:animate-soft-pulse">
+            <ActionButton type="submit" disabled={isMutating}>
               {isMutating ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className="me-2 h-4 w-4 animate-spin" />
                   Sending message
                 </>
               ) : (
                 <>{btn}</>
               )}
-            </Button>
+            </ActionButton>
           </form>
         </FormProvider>
       </CardContent>

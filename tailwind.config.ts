@@ -70,7 +70,7 @@ const config = {
         },
         "bounce-right": {
           "0%, 100%": {
-            translate: "-25%",
+            translate: "-12%",
             "animation-timing-function": "cubic-bezier(0.8,0,1,1)",
           },
           "50%": {
@@ -90,6 +90,11 @@ const config = {
         "soft-pulse": {
           "50%": { opacity: "0.85" },
         },
+        tilt: {
+          "0%, 50%, 100%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(1deg)" },
+          "75%": { transform: "rotate(-1deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -98,6 +103,7 @@ const config = {
         wiggle: "wiggle 5s ease-in-out infinite",
         reveal: "reveal 3s ease-in-out",
         "soft-pulse": "soft-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        tilt: "tilt 10s infinite",
       },
     },
   },

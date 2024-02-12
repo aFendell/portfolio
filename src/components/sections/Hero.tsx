@@ -4,8 +4,8 @@ import { MoveRight } from "lucide-react";
 
 import chameleon from "../../../public/images/chameleon1.webp";
 import { heroData } from "@/data/hero";
-import { Button } from "@/components/ui/Button";
 import { HeroTitle, Subtitle } from "../ui/Typography";
+import ActionButton from "../ui/ActionButton";
 
 const Hero = () => {
   const { title, subtitle } = heroData;
@@ -21,22 +21,20 @@ const Hero = () => {
         quality={100}
         placeholder="blur"
       />
-      <div className="">
+      <div>
         <HeroTitle>{title}</HeroTitle>
         <Subtitle className="max-w-96 whitespace-pre-line text-pretty text-2xl">
           {subtitle}
         </Subtitle>
-        <Button
-          className="mt-14 flex divide-violet-50 text-violet-50 neon-violet motion-safe:animate-soft-pulse sm:mt-16"
-          asChild>
-          <Link href="#contact">
+        <ActionButton className="mt-14">
+          <Link className="flex items-center justify-center" href="#contact">
             Contact me
             <MoveRight
               size={20}
               className="ms-4 motion-safe:animate-bounce-right"
             />
           </Link>
-        </Button>
+        </ActionButton>
       </div>
     </section>
   );

@@ -76,7 +76,7 @@ const TimelineItem = ({
       <div
         id={`item-${id}`}
         className={cn(
-          "relative block w-72 rounded-md border border-gray-400 p-5",
+          "relative block w-72 rounded-md border border-gray-400 p-5 neon-neutral",
         )}
         key={id}>
         <H3>{title}</H3>

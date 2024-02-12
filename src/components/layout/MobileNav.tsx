@@ -32,15 +32,13 @@ const MobileNav = () => {
       <nav
         onClick={toggleIsOpen}
         className={cn(
-          "absolute top-16 h-screen w-full  origin-top -translate-x-3 overflow-scroll overscroll-contain border-opacity-40 bg-gray-950 bg-opacity-60 p-3 shadow-black/[0.03] backdrop-blur-lg duration-150",
-          isOpen
-            ? "scale-y-100 overscroll-contain bg-opacity-80"
-            : "scale-y-0 bg-opacity-0",
+          "absolute top-16 -z-10 h-screen w-full origin-top -translate-x-3 scale-0 overflow-scroll bg-gray-950 bg-opacity-85 opacity-0 backdrop-blur-md duration-100",
+          isOpen ? "scale-100 opacity-100" : "scale-0 opacity-0",
         )}>
-        <ul className="flex flex-col gap-1 py-2 sm:flex-row sm:gap-3">
+        <ul className="relative z-20 flex flex-col gap-1 py-2 sm:flex-row sm:gap-3">
           {routes.map((route) => (
             <li
-              className="flex items-center justify-center border-b border-gray-500"
+              className="flex items-center justify-center border-b border-gray-400  border-opacity-40"
               key={route.hash}>
               <Link
                 className="rounded-full px-4 py-4 text-white hover:text-gray-950"

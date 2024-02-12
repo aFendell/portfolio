@@ -34,7 +34,7 @@ const StackItem = ({ tech, index }: Props) => {
       custom={index}>
       <Badge
         variant="secondary"
-        className="rounded-sm neon-sky sm:rounded-md sm:px-3 sm:py-2 sm:text-base">
+        className="rounded-sm neon-neutral sm:rounded-md sm:px-3 sm:py-2 sm:text-base">
         {tech}
       </Badge>
     </motion.li>

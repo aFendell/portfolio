@@ -109,7 +109,7 @@ const ContactForm = () => {
               placeholder="Message"
               title="Message*"
             />
-            <ActionButton type="submit" disabled={isMutating}>
+            <ActionButton className="mt-8" type="submit" disabled={isMutating}>
               {isMutating ? (
                 <>
                   <Loader2 className="me-2 h-4 w-4 animate-spin" />

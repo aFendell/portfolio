@@ -2,21 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
 
-import chameleon from "../../../public/images/chameleon1.webp";
 import { heroData } from "@/data/hero";
 import { HeroTitle, Subtitle } from "../ui/Typography";
 import ActionButton from "../ui/ActionButton";
 
 const Hero = () => {
-  const { title, subtitle } = heroData;
+  const { title, subtitle, img } = heroData;
 
   return (
     <section
       id="home"
       className="flex flex-col items-center gap-3 motion-safe:animate-reveal sm:flex-row sm:justify-around sm:gap-8">
       <Image
-        alt="chameleon profile picture"
-        src={chameleon}
+        alt="profile picture"
+        src={img}
         className="h-32 w-32 rounded-full object-cover shadow-xl sm:h-56 sm:w-56"
         quality={100}
         placeholder="blur"

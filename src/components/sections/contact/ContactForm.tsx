@@ -13,6 +13,7 @@ import { useToast } from "@/hooks/useToast";
 import { contactFormData } from "@/data/contact";
 import { Loader2 } from "lucide-react";
 import ActionButton from "@/components/ui/ActionButton";
+import { H3 } from "@/components/ui/Typography";
 
 const formSchema: z.ZodType<MailPayload> = z.object({
   name: z
@@ -84,8 +85,10 @@ const ContactForm = () => {
   };
 
   return (
-    <Card className="mx-auto w-full max-w-96 bg-gray-700 bg-opacity-20 text-primary-foreground backdrop-blur-md neon-neutral">
-      <CardHeader>{title}</CardHeader>
+    <Card className="mx-auto w-full max-w-96 text-primary-foreground backdrop-blur-md neon-neutral">
+      <CardHeader>
+        <H3>{title}</H3>
+      </CardHeader>
       <CardContent>
         <FormProvider {...form}>
           <form

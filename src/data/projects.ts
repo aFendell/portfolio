@@ -20,7 +20,7 @@ type ProjectsData = {
 
 export const projectsData: ProjectsData = {
   title: "Projects",
-  subtitle: "Top",
+  subtitle: "Selected",
   projects: [
     {
       title: "Task Manager",

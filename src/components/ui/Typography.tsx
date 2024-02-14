@@ -1,13 +1,22 @@
 import { cn } from "@/lib/utils";
 
+type HeadingWithAfter = {
+  withAfter?: boolean;
+} & React.HTMLAttributes<HTMLHeadingElement>;
+
 export const HeroTitle = ({
   children,
   className,
-}: React.HTMLAttributes<HTMLHeadingElement>) => {
+  withAfter = true,
+}: HeadingWithAfter) => {
+  const afterClasses =
+    "after:absolute after:-right-4 after:bottom-0.5 after:block after:h-2 after:w-2 after:bg-fuchsia-500/90 after:rounded-full after:content-['']";
+
   return (
     <h1
       className={cn(
-        "mb-8 scroll-m-20 text-center text-4xl font-bold sm:mb-12 sm:text-start sm:text-5xl sm:font-extrabold",
+        "relative mx-auto mb-8 w-fit scroll-m-20 text-center text-4xl font-bold sm:mx-0 sm:mb-12 sm:text-start sm:text-5xl sm:font-extrabold",
+        withAfter ? afterClasses : "",
         className,
       )}>
       {children}
@@ -18,11 +27,16 @@ export const HeroTitle = ({
 export const SectionTitle = ({
   children,
   className,
-}: React.HTMLAttributes<HTMLHeadingElement>) => {
+  withAfter = true,
+}: HeadingWithAfter) => {
+  const afterClasses =
+    "after:absolute after:-right-[7px] after:bottom-[4px] after:block after:h-1 after:w-1 after:bg-fuchsia-500/90 after:rounded-full after:content-['']";
+
   return (
     <h2
       className={cn(
-        "mb-8 scroll-m-20 text-center text-2xl font-medium sm:mb-12 sm:text-start sm:text-3xl",
+        "relative mx-auto mb-8 w-fit scroll-m-20 text-center text-2xl font-medium sm:mx-0 sm:mb-12 sm:text-start sm:text-3xl",
+        withAfter ? afterClasses : "",
         className,
       )}>
       {children}

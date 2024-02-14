@@ -1,5 +1,5 @@
 export const contactData = {
-  title: "Contact.",
+  title: "Contact",
   subtitle: "Get in touch",
 };
 

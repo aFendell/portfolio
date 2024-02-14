@@ -95,6 +95,20 @@ const config = {
           "25%": { transform: "rotate(1deg)" },
           "75%": { transform: "rotate(-1deg)" },
         },
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+          "100%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,6 +118,7 @@ const config = {
         reveal: "reveal 3s ease-in-out",
         "soft-pulse": "soft-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         tilt: "tilt 10s infinite",
+        blob: "blob 7s infinite",
       },
     },
   },

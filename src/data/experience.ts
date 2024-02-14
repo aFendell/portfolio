@@ -10,7 +10,7 @@ export type ExperienceItem = {
 };
 
 export const experienceData = {
-  title: "Experience.",
+  title: "Experience",
   subtitle: "So far",
   jobs: [
     {

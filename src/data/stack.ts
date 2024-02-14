@@ -1,5 +1,5 @@
 export const stackData = {
-  title: "Stack.",
+  title: "Stack",
   subtitle: "Tech",
   stack: [
     "HTML",

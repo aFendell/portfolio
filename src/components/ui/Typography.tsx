@@ -10,12 +10,12 @@ export const HeroTitle = ({
   withAfter = true,
 }: HeadingWithAfter) => {
   const afterClasses =
-    "after:absolute after:-right-4 after:bottom-0.5 after:block after:h-2.5 after:w-2.5 after:bg-fuchsia-500/90 after:rounded-full after:content-['']";
+    "after:absolute after:-right-4 after:bottom-0.5 after:block after:h-2 after:w-2 after:bg-fuchsia-500/90 after:rounded-full after:content-['']";
 
   return (
     <h1
       className={cn(
-        "relative mb-8 w-fit scroll-m-20 text-center text-4xl font-bold sm:mb-12 sm:text-start sm:text-5xl sm:font-extrabold",
+        "relative mx-auto mb-8 w-fit scroll-m-20 text-center text-4xl font-bold sm:mx-0 sm:mb-12 sm:text-start sm:text-5xl sm:font-extrabold",
         withAfter ? afterClasses : "",
         className,
       )}>

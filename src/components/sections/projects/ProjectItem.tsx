@@ -39,8 +39,10 @@ const ProjectItem = ({ project }: { project: Project }) => {
         </ul>
       </CardContent>
       <CardFooter className="flex justify-end">
-        <Button className="" size="sm" variant="outline" asChild>
-          <Link href={project.gitLink}>Github</Link>
+        <Button size="sm" variant="outline" asChild>
+          <Link href={project.gitLink} target="_blank">
+            Github
+          </Link>
         </Button>
       </CardFooter>
     </Card>

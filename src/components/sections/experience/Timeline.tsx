@@ -28,7 +28,7 @@ const Timeline = ({ items }: Props) => {
   return (
     <div className="relative">
       <motion.div
-        className="absolute left-1/2 top-[-2rem] -z-10 hidden h-[calc(100%+4rem)] w-[1px] origin-top -translate-x-1/2 bg-white sm:block"
+        className="absolute left-1/2 top-[-2rem] -z-10 hidden h-[calc(100%+4rem)] w-[1px] origin-top -translate-x-1/2 bg-white md:block"
         variants={fadeGrowAnimationVariants}
         initial="hidden"
         whileInView="visible"

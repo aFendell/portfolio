@@ -1,4 +1,4 @@
-This is a my personal [portfolio website](https://my-portfolio-url.com/).
+This is a my personal [portfolio website](https://afendell.vercel.app/).
 
 ## It was crafted using the folowing stack:
 
@@ -6,6 +6,7 @@ This is a my personal [portfolio website](https://my-portfolio-url.com/).
 - Next.js
 - TypeScript
 - Tailwind CSS
+- Radix UI
 - shadcn
 - Framer Motion
 - React Hook Form
